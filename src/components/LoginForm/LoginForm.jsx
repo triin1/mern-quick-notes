@@ -8,14 +8,14 @@ export default function LoginForm({ setUser }) {
   });
   const [error, setError] = useState('');
 
-  function handleChange(evt) {
-    setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
+  function handleChange(event) {
+    setCredentials({ ...credentials, [event.target.name]: event.target.value });
     setError('');
   }
 
-  async function handleSubmit(evt) {
+  async function handleSubmit(event) {
     // Prevent form from being submitted to the server
-    evt.preventDefault();
+    event.preventDefault();
     try {
       // The promise returned by the signUp service method 
       // will resolve to the user object included in the
