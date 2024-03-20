@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(require('./config/checkToken'));
 
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/notes', require('./routes/api/notes'));
 
 // will respond to any paths we don't recognise by sending the React index.html
 app.get('/*', function(req, res) {

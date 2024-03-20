@@ -3,7 +3,7 @@ const router = express.Router();
 const usersController = require("../../controllers/api/users");
 const ensureLoggedIn = require("../../config/ensureLoggedIn")
 
-//All paths start wiht '/api/users'
+//All paths start with '/api/users'
 
 router.get('/check-token', ensureLoggedIn, usersController.checkToken);
 

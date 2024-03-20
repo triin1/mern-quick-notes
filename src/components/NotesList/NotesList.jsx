@@ -1,9 +1,13 @@
 const NotesList = ({ notes }) => {
-   
+
     return (
         <div>
-            {notes.map((note, index) =>
-                <p key={index}>{note}</p>
+            {notes.map((note) =>
+                <div key={note._id}>
+                    <p>{new Date(note.createdAt).toLocaleString()}</p>
+                    <p>{note.text}</p>
+                    
+                </div>
             )}
         </div>
     )

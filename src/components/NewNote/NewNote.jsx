@@ -7,7 +7,7 @@ const NewNote = ({ addNotes }) => {
         setNewNote(event.target.value)
     }
     
-    const _handleSubmit = (event) => {
+    const _handleSubmit = async (event) => {
         event.preventDefault();
         addNotes(newNote);
         setNewNote("");
@@ -18,7 +18,7 @@ const NewNote = ({ addNotes }) => {
             <div className="form-container">
                 <form autoComplete="off" onSubmit={_handleSubmit}>
                     <label>Insert note text:</label>
-                        <input value={newNote} onChange={_handleChange} required />
+                        <input name="text" value={newNote} onChange={_handleChange} required />
                     <button type="submit">ADD NOTE</button>
                 </form>
             </div>
