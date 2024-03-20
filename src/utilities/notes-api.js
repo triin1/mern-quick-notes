@@ -10,4 +10,7 @@ export function createNote(noteText) {
         text: noteText
     });
   }
-  
+
+  export async function deleteNote(id) {
+    return sendRequest(`${ BASE_URL }/${ id }`, 'DELETE');
+  }
